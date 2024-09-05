@@ -13,13 +13,22 @@ Score : 50%, Présence : 90 => Note: F
 */
 
 public class GradingCalculator {
+
+    // ----- Propriétés -----
+
     public int score;
     public int attendancePercentage;
+
+
+    // ----- Constructeur -----
 
     public GradingCalculator(int score, int attendancePercentage) {
         this.score = score;
         this.attendancePercentage = attendancePercentage;
     }
+
+
+    // ----- Méthodes -----
 
     public char getGrade() {
         if(score > 90 && attendancePercentage > 70) return 'A';
@@ -27,4 +36,5 @@ public class GradingCalculator {
         else if (score > 60 && attendancePercentage > 60) return  'C';
         else return 'F';
     }
+
 }
