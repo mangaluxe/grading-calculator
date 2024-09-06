@@ -34,7 +34,8 @@ public class GetFibSeriesTest {
     public void testDeclenchementWhenRange_1_ThenResult_isListContain_0() {
         // Arrange
         fib = new Fib(1);
-       List<Integer> resultAwait = {0};
+//        List<Integer> resultAwait = {0};
+        List<Integer> resultAwait = Arrays.asList(0);
 
         // Act
         List<Integer> result = fib.getFibSeries();
@@ -46,9 +47,10 @@ public class GetFibSeriesTest {
 
 
     @Test
-    public void testDeclenchementWhenRange_1_TheResult_contain_3() {
+    public void testDeclenchementWhenRange_6_TheResult_contain_3() {
         // Arrange
         fib = new Fib(6);
+//        int resultAwait = 3;
 
         // Act
         List<Integer> result = fib.getFibSeries();
@@ -61,15 +63,17 @@ public class GetFibSeriesTest {
 
 
     @Test
-    public void testDeclenchementWhenRange_1_TheResult_contain_6_elements() {
+    public void testDeclenchementWhenRange_6_TheResult_contain_6_elements() {
         // Arrange
         fib = new Fib(6);
+//        int resultAwait = fib.size();
 
         // Act
         List<Integer> result = fib.getFibSeries();
         System.out.println(result);
 
         // Assert
+//        Assertions.assertEquals(resultAwait, result);
         Assertions.assertEquals(6, result.size());
 
     }
@@ -93,7 +97,7 @@ public class GetFibSeriesTest {
     public void testDeclenchementWhenRange_6_ThenResult_isSortedAscending() {
         // Arrange
         fib = new Fib(6);
-        List<Integer> resultAwait = ;
+        List<Integer> resultAwait = Arrays.asList(0, 1, 1, 2, 3, 5);
 
         // Act
         List<Integer> result = fib.getFibSeries();
